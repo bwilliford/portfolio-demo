@@ -2,6 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&family=PT+Sans+Narrow:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /* Variables */
+:root {
+  --primary-color: #ffffff;
+  --transition: 0.4s;
+  --master-border-radius: 20px;
+}
+
 
 /* Overall */
 
@@ -14,22 +20,20 @@ body {
   color: #e8e8e8;
   margin: 0;
   padding: 0;
-  font-family: 'PT Sans Narrow';
-  font-weight: 100;
 }
 
 
 /* Typography */ 
 h1 {
-  font-family: 'PT Sans Narrow';
+  color: var(--primary-color);
 }
 
 h2 {
-  font-family: 'PT Sans Narrow';
+  color: var(--primary-color);
 }
 
 h3 {
-  font-family: 'PT Sans Narrow';
+  color: var(--primary-color);
 }
 
 h4 {
@@ -74,18 +78,19 @@ a {
   font-size: 24px;
   margin-right: 40px;
   line-height: 100px;
+  transition-duration: 2000ms;
 }
 
 #nav li:hover {
   color: #298DFF;
   transform: scale(1.1);
-  transition-duration: 500ms;
+  transition-duration: var(--transition);
   cursor: pointer;
 }
 
 /* Page Layout */
 .section {
-  min-height: 60vh;
+  min-height: 100vh;
 }
 
 .section img {
@@ -95,16 +100,16 @@ a {
 
 .section img:hover {
   opacity: 0.6;
-  transition-duration: 500ms;
+  transition-duration: var(--transition);
   cursor: pointer;
 }
 
-#heroText {
-  margin-top: 40vh;
+#hero {
+  padding-top: 35vh;
 }
 
-#hero {
-  padding-top: 200px;
+#hero h2 {
+  font-weight: 100;
 }
 
 #bio {
@@ -135,3 +140,120 @@ a {
   background: #0E3E6B;
   border-radius: 8px;
 } 
+
+
+/* Buttons */
+
+.btn {
+  background-color: #2f1251;
+  border-radius: 30px;
+  border: 1px solid #fff;
+  height: 100px;
+  line-height: 100px;
+}
+
+.btn:hover {
+  background-color: #501890;
+  border: 3px solid #fff;
+}
+
+/* Cards */
+
+.card {
+  background-color: var(--primary-color);
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.card-image {
+  padding: 20px 20px 0 20px;
+}
+
+.card .card-image img {
+  border-radius: 20px;
+}
+
+.card-content {
+  color: #000;
+}
+
+/* Gimmick */
+
+.gimmick {
+  background-image: url('../images/hero-bg.svg');
+  background-size: cover;
+  position: absolute;
+  height: 800px;
+  width: 800px;
+  top: calc(50vh - 400px);
+  left: calc(50vw - 400px);
+  animation-name: spin;
+  animation-duration: 10s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  z-index: -1;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg) scale(1);
+    opacity: 0.2;
+  }
+  50% {
+    transform: rotate(180deg) scale(2);
+    opacity: 0.6;
+  }
+  100%{
+    transform: rotate(90deg) scale(0.5);
+    opacity: 0.3;
+  }
+}
+
+/* Button */
+
+.button {
+  border-radius: 8px;
+  color: #fff;
+  background: #298DFF;
+  display: inline-flex;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+
+.button:hover {
+  box-shadow: 0px 4px 30px 0px rgba(0, 94, 202, 0.40);
+  transition-duration: 0.3s;
+}
+
+/* Cards */
+
+.bioCard {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.bioCard img {
+  border-radius: 50%;
+}
+
+.bioCard h4 {
+  color: #000719;
+}
+
+.bioCard h5 {
+  color: #298DFF;
+}
+
+.biocard .button {
+  display: block;
+  text-align: center;
+  width: 160px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
