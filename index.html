@@ -17,43 +17,50 @@
 </head>
 
 <body>
-    
+
     <!-- Logo -->
     <div id="logo">
         Jane Smith
     </div>
 
     <!-- This is my nav -->
-    <ul id="nav">
-        <a href="#portfolio">
-            <li>Portfolio</li>
-        </a>
-        <a href="#bio">
-            <li>Bio</li>
-        </a>
-        <a href="#cv">
-            <li>CV</li>
-        </a>
-        <a href="#contact">
-            <li>Contact</li>
-        </a>
-    </ul>
+    <div id="navTrigger" onclick="toggleNav()"></div>
+
+    <div id="navWrapper">
+        <ul id="nav">
+            <a href="#portfolio" onclick="toggleNav()">
+                <li>Portfolio</li>
+            </a>
+            <a href="#bio" onclick="toggleNav()">
+                <li>Bio</li>
+            </a>
+            <a href="#cv" onclick="toggleNav()">
+                <li>CV</li>
+            </a>
+            <a href="#contact" onclick="toggleNav()">
+                <li>Contact</li>
+            </a>
+        </ul>
+    </div>
 
     <!-- Hero Section -->
     <div id="hero" class="section">
         <h1 class="center-align">Jane Smith</h1>
         <h2 class="center-align">UX/UI Designer</h2>
         <div class="gimmick"></div>
+        <a href="#portfolio">
+            <div class="arrow"></div>
+        </a>
     </div>
 
     <!-- Portfolio Section -->
     <div id="portfolio" class="section">
-        
+
         <h2 class="center-align">Portfolio</h2>
         <div class="container">
             <div class="row">
                 <div class="col s12 m6 l6">
-                    
+
                     <div class="card">
                         <div class="card-image">
                             <img src="images/project-preview.jpg">
@@ -75,7 +82,7 @@
                                 I am convenient because I require little markup to use effectively.</p>
                         </div>
                     </div>
-                    
+
                 </div>
                 <div class="col s12 m6 l6">
 
@@ -86,7 +93,7 @@
                         <div class="card-content">
                             <span class="card-title">Card Title</span>
                             <p>I am a very simple card. I am good at containing small bits of information.
-                            I am convenient because I require little markup to use effectively.</p>
+                                I am convenient because I require little markup to use effectively.</p>
                         </div>
                     </div>
 
@@ -97,7 +104,7 @@
                         <div class="card-content">
                             <span class="card-title">Card Title</span>
                             <p>I am a very simple card. I am good at containing small bits of information.
-                            I am convenient because I require little markup to use effectively.</p>
+                                I am convenient because I require little markup to use effectively.</p>
                         </div>
                     </div>
                 </div>
@@ -254,7 +261,7 @@
     <!-- This is where I load the Javascript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="js/main.js"></script>
-    
+
 </body>
 
 </html>

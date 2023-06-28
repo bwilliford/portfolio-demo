@@ -45,3 +45,8 @@ function createButton() {
 function toggleDark() {
     document.body.classList.toggle('dark');
 }
+
+function toggleNav() {
+    document.getElementById('navWrapper').classList.toggle('active');
+    document.getElementById('navTrigger').classList.toggle('active');
+}

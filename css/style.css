@@ -92,6 +92,25 @@ a {
   cursor: pointer;
 }
 
+#navWrapper {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0,0,0,0);
+}
+
+#navTrigger {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  background-image: url('../images/icons/hamburger.svg');
+  z-index: 2;
+  display: none;
+  cursor: pointer;
+}
+
 /* Page Layout */
 .section {
   min-height: 100vh;
@@ -108,6 +127,15 @@ a {
 
 #hero h2 {
   font-weight: 100;
+}
+
+.arrow {
+  width: 40px;
+  height: 40px;
+  background-image: url('../images/icons/arrow-down.svg');
+  position: absolute;
+  top: 90vh;
+  left: 50vw;
 }
 
 #bio {
@@ -254,4 +282,41 @@ a {
   width: 160px;
   margin: 0 auto;
   margin-top: 20px;
+}
+
+/* Change look / feel for smaller screen sizes */
+@media only screen and (max-width: 576px) {
+
+  #nav {
+    top: 20vh;
+    right: calc(50vw - 100px);
+  }
+
+  #nav li {
+    display: block;
+    text-align: center;
+  }
+
+  #navWrapper {
+    background-color: rgba(0,0,0,0.2);
+    backdrop-filter: blur(30px);
+    z-index: -1;
+    opacity: 0;
+    transition-duration: var(--transition);
+  }
+
+  #navWrapper.active {
+    z-index: 1;
+    opacity: 1;
+    transition-duration: var(--transition);
+  }
+
+  #navTrigger {
+    display: block;
+  }
+
+  #navTrigger.active {
+    background-image: url('../images/icons/x.svg');
+  }
+
 }
