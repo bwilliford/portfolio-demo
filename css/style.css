@@ -94,8 +94,6 @@ a {
 
 #navWrapper {
   position: fixed;
-  height: 100vh;
-  width: 100vw;
   background-color: rgba(0,0,0,0);
 }
 
@@ -135,7 +133,7 @@ a {
   background-image: url('../images/icons/arrow-down.svg');
   position: absolute;
   top: 90vh;
-  left: 50vw;
+  left: calc(50vw - 20px);
 }
 
 #bio {
@@ -302,6 +300,8 @@ a {
     backdrop-filter: blur(30px);
     z-index: -1;
     opacity: 0;
+    height: 100vh;
+    width: 100vw;
     transition-duration: var(--transition);
   }
 
